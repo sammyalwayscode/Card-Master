@@ -1,0 +1,139 @@
+/* *,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} */
+
+/* img {
+  width: 100%;
+} */
+
+.Body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #eee;
+  /* padding: 0 1.5rem; */
+  font-family: poppins;
+}
+
+.BlogPost {
+  width: 400px;
+  height: 230px;
+  /* max-width: 98rem; */
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.BlogPostImg {
+  height: 230px;
+  width: 300px;
+  /* min-width: 35rem;
+  max-width: 35rem;
+  height: 30rem; */
+  transform: translateX(-5rem);
+  position: relative;
+}
+
+.BlogPostImg img {
+  height: 230px;
+  width: 250px;
+  object-fit: cover;
+  display: block;
+  border-radius: 5px;
+}
+
+.BlogPostImg::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(79, 172, 254, 0.8),
+    rgba(0, 242, 254, 0.8)
+  );
+  box-shadow: 0.5rem 0.5rem 3rem 1px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+
+.BlogPostInfo {
+  margin-left: -70px;
+}
+
+.BlogPostDate span {
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: small;
+  font-weight: 600;
+  /* margin: ; */
+}
+
+.BlogPostTitle {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #4facfe;
+  margin-top: -1px;
+}
+
+.BlogPostText {
+  margin-top: -1px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.BlogPostCTA {
+  height: 30px;
+  width: 150px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #fff;
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  border-radius: 5px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.BlogPostCTA:hover {
+  background-image: linear-gradient(to right, #00f2fe 0%, #4facfe 100%);
+}
+
+@media screen and (max-width: 600px) {
+  .BlogPost {
+    width: 300px;
+    height: 300px;
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+
+  .BlogPostImg {
+    height: 150px;
+    min-width: 100%;
+    max-width: 100%;
+    transform: translate(0, -4rem);
+  }
+
+  .BlogPostImg img {
+    height: 150px;
+    width: 300px;
+  }
+
+  .BlogPostInfo {
+    margin-left: 0;
+    margin-top: -40px;
+  }
+}

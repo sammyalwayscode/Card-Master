@@ -1,0 +1,100 @@
+.CardHold {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dddddd;
+}
+
+.Card {
+  position: relative;
+  height: 470px;
+  width: 340px;
+  display: block;
+  background: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+  transition: 0.4s linear;
+}
+
+.Card:hover {
+  box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+}
+
+.Card .Image {
+  background: #000;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.Image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.Card:hover .Image img {
+  opacity: 0.6;
+  transform: scale(1.1);
+}
+
+/* .Card.active .Image img {
+  opacity: 0.6;
+  transform: scale(1.1);
+} */
+
+.Card .Content {
+  position: absolute;
+  bottom: 0px;
+  background: #fff;
+  width: 340px;
+  text-align: center;
+  /* padding: 20px 30px; */
+}
+
+.Content .Title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.Content .SubTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+button p {
+  color: #666666;
+  font-size: 16px;
+  text-align: justify;
+  line-height: 1.8rem;
+}
+
+.Bottom button {
+  float: left;
+  padding: 7px 15px;
+  font-size: 17px;
+  background: #e74c3c;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.Bottom button:hover {
+  transform: scale(0.9);
+}
+
+.Bottom {
+  display: none;
+}
+.Bottom:hover {
+  display: block;
+  cursor: pointer;
+}
